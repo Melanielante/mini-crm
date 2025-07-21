@@ -3,7 +3,7 @@ import React from 'react'
 function EditCustomer  ()  {
   return (
     <div>
-        <h1>Edit Customer</h1>
+        <h1>Editting Customer</h1>
     </div>
   )
 }
