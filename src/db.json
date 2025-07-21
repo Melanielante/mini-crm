@@ -1,0 +1,74 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "Mel Coder",
+      "email": "mel@dev.com",
+      "status": "In Progress",
+      "notes": "Interested in React dashboard, follow up next week"
+    },
+    {
+      "id": 2,
+      "name": "Jane Njeri",
+      "email": "jane@business.co.ke",
+      "status": "New",
+      "notes": "Wants a mobile app proposal"
+    },
+    {
+      "id": 3,
+      "name": "Wycliffe Otieno",
+      "email": "wycliffo@solutions.org",
+      "status": "Closed",
+      "notes": "Project completed, happy with the results"
+    },
+    {
+      "id": 4,
+      "name": "Fatuma Hassan",
+      "email": "fatuma@ngo.org",
+      "status": "New",
+      "notes": "Needs website redesign consultation"
+    },
+    {
+      "id": 5,
+      "name": "Kevin Kamau",
+      "email": "kevin@techafrica.io",
+      "status": "In Progress",
+      "notes": "Waiting for contract approval"
+    },
+    {
+      "id": 6,
+      "name": "Linda Wanjiku",
+      "email": "linda@creativeminds.com",
+      "status": "Closed",
+      "notes": "Design project complete. Wants hosting next."
+    },
+    {
+      "id": 7,
+      "name": "Brian Ouma",
+      "email": "brian@agrihub.africa",
+      "status": "New",
+      "notes": "Needs agri-data dashboard MVP"
+    },
+    {
+      "id": 8,
+      "name": "Grace Chebet",
+      "email": "grace@chebetventures.co",
+      "status": "In Progress",
+      "notes": "Pending feedback on wireframes"
+    },
+    {
+      "id": 9,
+      "name": "George Muriuki",
+      "email": "george@fintechlabs.org",
+      "status": "New",
+      "notes": "Asked for fintech CRM solution"
+    },
+    {
+      "id": 10,
+      "name": "Cynthia Atieno",
+      "email": "cynthia@cyncreatives.com",
+      "status": "Closed",
+      "notes": "Final payment received. Archive client."
+    }
+  ]
+}
