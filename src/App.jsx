@@ -1,5 +1,6 @@
 import React from 'react'
-import './App.css'
+import AddCustomer from './components/AddCustomer';
+import CustomerCard from './components/CustomerCard';
 
 function App() {
   
@@ -7,6 +8,8 @@ function App() {
   return (
     <>
       <h1>MINI CRM</h1>
+      <AddCustomer />
+      <CustomerCard/>
     </>
   )
 }
