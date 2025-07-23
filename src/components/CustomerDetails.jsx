@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useParams, useNavigate } from 'react-router';
 
 function CustomerDetails () {
   const {id} = useParams();
