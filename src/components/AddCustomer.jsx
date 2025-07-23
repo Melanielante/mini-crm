@@ -51,7 +51,7 @@ const AddCustomer = () => {
         <label>Notes:</label>
         <textarea name="notes" value={formData.notes} onChange={handleChange} />
 
-        <button type="submit" style={buttonStyle}>Add Customer</button>
+        <button type="submit" >Add Customer</button>
       </form>
     </div>
   );
