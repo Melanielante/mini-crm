@@ -7,6 +7,7 @@ import './App.css'
 import { Route, Routes } from 'react-router'
 import CustomerDetails from './components/CustomerDetails'
 import Home from './components/Home'
+import Footer from './components/Footer'
  
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='edit/:id' element={<EditCustomer />} />
         <Route path='customer/:id' element={<CustomerDetails />} />
       </Routes>
+      <Footer />
 
     </>
   )
