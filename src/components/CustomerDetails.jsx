@@ -25,13 +25,22 @@ function CustomerDetails () {
     });
   }, [id]);
 
-  if (isLoading) return <p>Loading customer details</p>
-
-
+  if (isLoading) return <p>Loading customer details...</p>
+  if(error) return <p>Error: {error} </p>
 
   return (
     <div>
-        <h1>Customer Details</h1>
+        <div className='customer-details'>
+          <h2>CCUSTOMERR DETAILS</h2>
+          <p><strong>NAME :</strong> {customer.name}</p>
+          <p><strong>EMAIL :</strong> {customer.email}</p>
+          <p><strong>STATUS :</strong> {customer.status}</p>
+          <p><strong>NOTES :</strong> {customer.notes}</p>
+
+
+          <button onClick={() => navigate(`/edit/${id}`)}>EDIT</button>
+          <button onClick={() => navigate(-1)} >BACK</button>
+        </div>
     </div>
   )
 }
