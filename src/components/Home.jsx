@@ -6,6 +6,7 @@ import { Link } from 'react-router';
 function Home() {
   return (
     <div className="home-container">
+      <div className='hero-blob'>  
       <div className="hero-content">
         <h1 className="hero-title">Welcome to MiniCRM</h1>
         <p className="hero-subtitle">
@@ -14,6 +15,7 @@ function Home() {
         <Link to="/list">
           <button className="hero-button">Get Started →</button>
         </Link>
+      </div>
       </div>
     </div>
   );
