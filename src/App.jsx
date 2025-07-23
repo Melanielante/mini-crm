@@ -8,6 +8,7 @@ import { Route, Routes } from 'react-router'
 import CustomerDetails from './components/CustomerDetails'
 import Home from './components/Home'
 import Footer from './components/Footer'
+import Navbar from './components/Navbar'
  
 
 
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <>
+      <Navbar />
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/list' element={<CustomerList />} />
