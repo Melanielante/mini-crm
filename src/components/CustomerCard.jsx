@@ -5,12 +5,12 @@ function CustomerCard ({ customer, onViewDetails, handleDelete }) {
     email,
     status,
     notes,
-    stats
+    
   } = customer
   return (
 
 <>
-  <h2 >Customer Details</h2>
+  <h2 >Customer Details here</h2>
   <div >
     <h3>Name: {customer.name}</h3>
     <p>Email: {customer.email}</p>
