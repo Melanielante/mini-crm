@@ -1,46 +1,11 @@
+import React from 'react'
 
-function CustomerCard ({ customer, onViewDetails, handleDelete }) {
-  const {
-    name,
-    email,
-    status,
-    notes
-  } = customer
+function CustomerCard () {
   return (
-
-<>
-  <h2 >Customer Details</h2>
-  <div >
-    <h3>Name: {customer.name}</h3>
-    <p>Email: {customer.email}</p>
-    <p>Status: {customer.status}</p>
-    <p>Notes: {customer.notes}</p>
-  </div>
-  
-  {/* Button to view more details */}
-
- <div>
-    <button  onClick={() => onViewDetails(customer)}>More</button>
- </div>
-
- 
-
-</>
-  );
-};
+    <div>
+        <h1>Customer card</h1>
+    </div>
+  )
+}
 
 export default CustomerCard;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
