@@ -1,11 +1,9 @@
 import React from 'react'
 
-function CustomerCard () {
+const CustomerCard = () => {
   return (
-    <div>
-        <h1>Customer card</h1>
-    </div>
+    <div>CustomerCard</div>
   )
 }
 
-export default CustomerCard;
+export default CustomerCard
