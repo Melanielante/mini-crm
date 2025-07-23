@@ -4,7 +4,8 @@ function CustomerCard ({ customer, onViewDetails, handleDelete }) {
     name,
     email,
     status,
-    notes
+    notes,
+    stats
   } = customer
   return (
 
