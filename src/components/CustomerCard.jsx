@@ -1,3 +1,4 @@
+
 function CustomerCard ({ customer, onViewDetails, handleDelete }) {
   const {
     name,
@@ -19,8 +20,8 @@ function CustomerCard ({ customer, onViewDetails, handleDelete }) {
   {/* Button to view more details */}
 
  <div>
-    <button style={buttonStyle} onClick={() => onViewDetails(customer)}>More</button>
-  </div>
+    <button  onClick={() => onViewDetails(customer)}>More</button>
+ </div>
 
  
 
@@ -29,6 +30,7 @@ function CustomerCard ({ customer, onViewDetails, handleDelete }) {
 };
 
 export default CustomerCard;
+
 
 
 
