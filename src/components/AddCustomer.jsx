@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 const API= 'https://json-server-template-w3qs.onrender.com/customers';
 
-
 const AddCustomer = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -36,9 +35,9 @@ const AddCustomer = () => {
 
 
   return (
-    <div className="form-container" >
+    <div >
       <h2>Add New Customer</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} >
         <label>Name:</label>
         <input name="name" value={formData.name} onChange={handleChange}  required />
         
@@ -49,9 +48,9 @@ const AddCustomer = () => {
         <input name="status" value={formData.status} onChange={handleChange}  required />
         
         <label>Notes:</label>
-        <textarea name="notes" value={formData.notes} onChange={handleChange} />
+        <textarea name="notes" value={formData.notes} onChange={handleChange}  />
 
-        <button type="submit" style={buttonStyle}>Add Customer</button>
+        <button type="submit" >Add Customer</button>
       </form>
     </div>
   );
