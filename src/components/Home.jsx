@@ -5,8 +5,9 @@ import { Link } from 'react-router';
 
 function Home() {
   return (
+    <div className='page-wrapper'>
     <div className="home-container">
-      <div className='hero-blob'>  
+      <div className='hero-blob'/>  
       <div className="hero-content">
         <h1 className="hero-title">Welcome to MiniCRM</h1>
         <p className="hero-subtitle">
@@ -18,6 +19,7 @@ function Home() {
       </div>
       </div>
     </div>
+    
   );
 }
 

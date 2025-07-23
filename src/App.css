@@ -1,17 +1,32 @@
-
-.home-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  text-align: center;
-  padding: 2rem;
-  background: linear-gradient(to right, #f7f7ff, #dff2ff);
-  animation: fadeIn 1.2s ease-in-out;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.home-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(to right, #8c8cf7, #015c99);
+  overflow: hidden;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Make the hero content centered in the available space */
 .hero-content {
+  z-index: 1;
   max-width: 600px;
+  margin: auto;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
 .hero-title {
@@ -44,62 +59,48 @@
   transform: scale(1.05);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
+/* Blob repositioned to not interfere with content */
 .hero-blob {
   position: absolute;
-  top: -50px;
-  left: -50px;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle at 30% 30%, #a2d2ff, #ffffff);
+  top: 5%;
+  left: 60%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle at 30% 30%, #042d53, #61bef3);
   border-radius: 50% 40% 60% 30% / 40% 30% 50% 60%;
-  opacity: 0.3;
+  opacity: 0.2;
   z-index: 0;
   animation: float 6s ease-in-out infinite;
 }
 
-
 @keyframes float {
   0% { transform: translateY(0px); }
-  50% { transform: translateY(20px); }
+  50% { transform: translateY(15px); }
   100% { transform: translateY(0px); }
 }
 
-.home-container {
-  position: relative;
-  overflow: hidden;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0px); opacity: 1; }
+}
+
+/* Footer sits at the bottom of the container */
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  z-index: 2;
   background-color: #20232a;
   color: #fff;
   padding: 1rem 2rem;
   font-size: 14px;
-  position: relative;
-  bottom: 0;
   width: 100%;
-  margin-top: 3rem;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer a {
@@ -112,4 +113,3 @@
 .footer a:hover {
   color: #21a1f1;
 }
-
