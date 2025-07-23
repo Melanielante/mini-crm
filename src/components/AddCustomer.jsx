@@ -83,7 +83,11 @@ const AddCustomer = () => {
         <label>Notes:</label>
         <textarea name="notes" value={formData.notes} onChange={handleChange} style={inputStyle} />
 
+
+        <button type="submit" >Add Customer</button>
+
         <button style={buttonStyle} type="submit" >Add Customer</button>
+
       </form>
     </div>
   );

@@ -1,10 +1,12 @@
 
-
-import AddCustomer from './components/AddCustomer';
-
 import React from 'react'
+import AddCustomer from './components/AddCustomer'
+import CustomerList from './components/CustomerList'
+import EditCustomer from './components/EditCustomer'
 import './App.css'
-import CustomerList from './components/CustomerList'  
+import { Route, Routes } from 'react-router'
+import CustomerDetails from './components/CustomerDetails'
+ 
 
 
 function App() {
@@ -12,11 +14,12 @@ function App() {
 
   return (
     <>
-      <h1>MINI CRM</h1>
-
-      <AddCustomer />
-      <CustomerList />
-      <EditCustomer />
+      <Routes>
+        <Route path='/list' element={<CustomerList />} />
+        <Route path='/add' element={<AddCustomer />} />
+        <Route path='edit/:id' element={<EditCustomer />} />
+        <Route path='customer/:id' element={<CustomerDetails />} />
+      </Routes>
 
     </>
   )
