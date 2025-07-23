@@ -3,7 +3,11 @@ import React from 'react'
 function Navbar() {
   return (
     <div>
-        <h1>Navbar</h1>
+        <h1>Customer Relationship Manager</h1>
+        <nav>
+           <img src="" alt="" />
+
+        </nav>
     </div>
   )
 }
