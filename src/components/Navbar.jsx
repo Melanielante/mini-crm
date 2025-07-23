@@ -2,13 +2,9 @@ import React from 'react'
 import App from '../App';
 import { NavLink } from 'react-router';
 function Navbar() {
-  const router = createBrowserRouter ([
-    {
-      path:"/",
-      element:<App /> 
-    }
-  ])
+ 
   return (
+   <div>
     <nav>
       <img src="./react.svg" alt="logo" />
         <h1>Customer Relationship Management</h1>
@@ -18,6 +14,11 @@ function Navbar() {
           <li><NavLink to={"/list"}>Current Customers</NavLink></li>
         </ul>
     </nav>
+
+    </div>
+        
+    
+
   )
 }
 
