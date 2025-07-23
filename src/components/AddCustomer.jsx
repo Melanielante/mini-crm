@@ -29,7 +29,7 @@ function AddCustomer() {
   };
 
   return (
-    <div className="add-customer">
+    <div className="add-customer"> 
       <h2 className='font-semibold p-4 text-2xl'>Add New Customer</h2>
       <form onSubmit={handleSubmit} className="max-w-xl mx-auto bg-white p-6 rounded-2xl shadow-md space-y-4">
         <label>Name:</label>
@@ -42,7 +42,9 @@ function AddCustomer() {
         <textarea name="notes" value={formData.notes} onChange={handleChange} className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
         <button type="submit" className="flex border rounded-lg px-4 py-1 bg-green-400">Add Customer</button>
       </form>
+      
     </div>
+     
   );
 }
 export default AddCustomer
