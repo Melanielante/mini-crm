@@ -1,9 +1,22 @@
-import React from 'react'
+// src/components/Home.jsx
+import React from 'react';
+import { Link } from 'react-router';
 
-const Home = () => {
+
+function Home() {
   return (
-    <div>Home</div>
-  )
+    <div className="home-container">
+      <div className="hero-content">
+        <h1 className="hero-title">Welcome to MiniCRM</h1>
+        <p className="hero-subtitle">
+          Easily manage your customers and grow your business with confidence.
+        </p>
+        <Link to="/list">
+          <button className="hero-button">Get Started →</button>
+        </Link>
+      </div>
+    </div>
+  );
 }
 
-export default Home
+export default Home;
