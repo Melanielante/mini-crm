@@ -1,6 +1,8 @@
 import React from 'react'
 import CustomerCard from './CustomerCard';
 
+
+
 function CustomerList ({customer, setData}) {
   const BASE_URL = "https://json-server-template-w3qs.onrender.com/customers";
   function handleDelete(id) {
@@ -25,7 +27,8 @@ function CustomerList ({customer, setData}) {
         })}
       </div>
     </div>
+
   )
 }
 
-export default CustomerList;
+export default CustomerList
