@@ -21,10 +21,11 @@ function CustomerDetails () {
     .then((data) => {
       setCustomer(data);
       setIsLoading(false);
+    })
+    .catch((err) => {
+      setError(err.message);
+      setIsLoading(false);
     });
-
-    
-    
   }, [id]);
 
 
