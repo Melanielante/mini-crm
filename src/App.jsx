@@ -12,7 +12,6 @@ import Navbar from './components/Navbar'
 
  
 
-
 function App() {
   
 
@@ -28,7 +27,7 @@ function App() {
         <Route path="/" element={<CustomerList />} />
         <Route path="/customers/:id" element={<CustomerDetails />} />
       </Routes>
-     
+
       <Footer />
 
     </>
