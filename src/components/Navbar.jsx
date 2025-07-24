@@ -8,7 +8,7 @@ function Navbar() {
    <div>
     <nav>
       <h1>Customer Relationship Management</h1>
-        <ul>
+        <ul className='nav-links'>
           <li><NavLink to={"/"}>Home</NavLink></li>
           <li><NavLink to={"/add"}>Add Customer</NavLink></li>
           <li><NavLink to={"/list"}>Current Customers</NavLink></li>

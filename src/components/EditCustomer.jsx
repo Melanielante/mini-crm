@@ -48,15 +48,91 @@ function EditCustomer  ()  {
 
   return (
     <div>
-        <div className='edit-customer'>
+        <div className='edit-customer'
+             style={{
+                padding: "20px",
+                border: "1px solid #ccc",
+                borderRadius: "8px",
+                backgroundColor: "#f9f9f9",
+                margin: "20px auto",
+                maxWidth: "600px",
+                fontFamily: "sans-serif",
+                display: "flex",
+                flexDirection: "column",
+                gap: "10px"
+             }}>
           <h2>EDIT CUSTOMER</h2>
-          <form onSubmit={handleSubmit}>
-            <input type="text" value={name} placeholder='customer name' onChange={(event) => setName(event.target.value)} />
-            <input type="text" value={email} placeholder='email address' onChange={(event) => setEmail(event.target.value)} />
-            <input type="text" value={status} placeholder='status' onChange={(event) => setStatus(event.target.value)} />
-            <input type="text" value={notes} placeholder='write notes' onChange={(event) => setNotes(event.target.value)} />
+          <form onSubmit={handleSubmit} 
+            style={{
+              maxWidth: '400px',
+              margin: '20px auto',
+              padding: '24px',
+              borderRadius: '12px',
+              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+              backgroundColor: '#ffffff',
+              fontFamily: 'sans-serif',
+            } }>
+            <input type="text" 
+            value={name} 
+            placeholder='customer name' 
+            onChange={(event) => setName(event.target.value)} 
+            className='input-field'
+            style={{
+              width: '100%',
+              padding: '10px 14px',
+              marginBottom: '12px',
+              borderRadius: '6px',
+              border: '1px solid #ddd',
+              fontSize: '16px',
+              boxSizing: 'border-box',
+              
+             }}
+            />
+            <input type="text" value={email} placeholder='email address' onChange={(event) => setEmail(event.target.value)} 
+            className='input-field'
+            style={{
+              width: '100%',
+              padding: '10px 14px',
+              marginBottom: '12px',
+              borderRadius: '6px',
+              border: '1px solid #ddd',
+              boxSizing: 'border-box',
+              
+             }}/>
+            <input type="text" value={status} placeholder='status' onChange={(event) => setStatus(event.target.value)} 
+            className='input-field'
+            style={{
+              width: '100%',
+              padding: '10px 14px',
+              marginBottom: '12px',
+              borderRadius: '6px',
+              border: '1px solid #ddd',
+              fontSize: '16px',
+              
+              boxSizing: 'border-box',
+             }}/>
+            <input type="text" value={notes} placeholder='write notes' onChange={(event) => setNotes(event.target.value)} 
+            className='input-field'
+            style={{
+              width: '100%',
+              padding: '10px 14px',
+              marginBottom: '12px',
+              borderRadius: '6px',
+              border: '1px solid #ddd',
+              fontSize: '16px',
+              
+              boxSizing: 'border-box',
+             }}/>
 
-            <button type='submit'>UPDATE</button>
+            <button type='submit'
+            style={{
+              width: '100%',
+              padding: '10px 14px',
+              borderRadius: '6px',
+              border: 'none',
+              backgroundColor: 'green', 
+              color: 'white',
+              fontSize: '16px',}}>UPDATE</button>
           </form>
         </div>
     </div>

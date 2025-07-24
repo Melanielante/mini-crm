@@ -35,9 +35,21 @@ function CustomerDetails () {
 <>  
     
 
-    <div>
-        <div className='customer-details'>
-          <h2>CUSTOMER DETAILS</h2>
+    <div >
+        <div className='customer-details' 
+        style={{ padding: "20px", 
+                 border: "1px solid #ccc", 
+                 borderRadius: "8px", 
+                 backgroundColor: "#f9f9f9",
+                 margin: "20px auto",
+                 maxWidth: "600px",
+                 fontFamily: "sans-serif",
+                 display: "flex",
+                 flexDirection: "column",
+                 gap: "10px",
+                 }}> 
+                
+          <h2 >CUSTOMER DETAILS</h2>
           <p><strong>NAME :</strong> {customer.name}</p>
           <p><strong>EMAIL :</strong> {customer.email}</p>
           <p><strong>STATUS :</strong> {customer.status}</p>
@@ -50,8 +62,27 @@ function CustomerDetails () {
           <p><strong>LAST CONTACTED :</strong> {customer.lastContacted}</p>
 
 
-          <button onClick={() => navigate(`/edit/${id}`)}>EDIT</button>
-          <button onClick={() => navigate(-1)} >BACK</button>
+          <button onClick={() => navigate(`/edit/${id}`)}
+            style={{
+              padding: "10px 16px",
+              backgroundColor: "blue",
+              color: "white",
+              border: "none",
+              borderRadius: "4px",
+              cursor: "pointer"
+            }}
+            >EDIT</button>
+          <button onClick={() => navigate(-1)}
+          style={{
+            padding: "10px 16px",
+            backgroundColor: "lightgray",
+            color: "black",
+            border: "none",
+            borderRadius: "4px",
+            cursor: "pointer",
+            marginLeft: "10px"
+          }}
+          >BACK</button>
         </div>
     </div>
     </>
