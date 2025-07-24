@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router';
-import { useParams, useNavigate } from 'react-router';
+
 
 
 function CustomerDetails () {
@@ -22,8 +22,11 @@ function CustomerDetails () {
       setCustomer(data);
       setIsLoading(false);
     });
+
+    
     
   }, [id]);
+
 
   if (isLoading) return <p>Loading customer details...</p>
   if(error) return <p>Error: {error} </p>
@@ -39,6 +42,12 @@ function CustomerDetails () {
           <p><strong>EMAIL :</strong> {customer.email}</p>
           <p><strong>STATUS :</strong> {customer.status}</p>
           <p><strong>NOTES :</strong> {customer.notes}</p>
+          <p><strong>COMPANY :</strong> {customer.company}</p>
+          <p><strong>POSITION :</strong> {customer.position}</p>
+          <p><strong>PHONE NUMBER :</strong> {customer.phoneNumber}</p>
+          <p><strong>LOCATION :</strong> {customer.location}</p>
+          <p><strong>CREATED AT :</strong> {customer.createdAt}</p>
+          <p><strong>LAST CONTACTED :</strong> {customer.lastContacted}</p>
 
 
           <button onClick={() => navigate(`/edit/${id}`)}>EDIT</button>
