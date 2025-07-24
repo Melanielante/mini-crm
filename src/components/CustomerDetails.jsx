@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router';
+import { useParams, useNavigate } from 'react-router';
+
 
 function CustomerDetails () {
   const {id} = useParams();
@@ -19,20 +21,20 @@ function CustomerDetails () {
     .then((data) => {
       setCustomer(data);
       setIsLoading(false);
-    })
-    .catch((err) => {
-      setError(err.message);
-      setIsLoading(false);
     });
+    
   }, [id]);
 
   if (isLoading) return <p>Loading customer details...</p>
   if(error) return <p>Error: {error} </p>
 
   return (
+<>  
+    
+
     <div>
         <div className='customer-details'>
-          <h2>CCUSTOMERR DETAILS</h2>
+          <h2>CUSTOMER DETAILS</h2>
           <p><strong>NAME :</strong> {customer.name}</p>
           <p><strong>EMAIL :</strong> {customer.email}</p>
           <p><strong>STATUS :</strong> {customer.status}</p>
@@ -43,6 +45,7 @@ function CustomerDetails () {
           <button onClick={() => navigate(-1)} >BACK</button>
         </div>
     </div>
+    </>
   )
 }
 

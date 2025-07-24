@@ -9,8 +9,8 @@ import CustomerDetails from './components/CustomerDetails'
 import Home from './components/Home'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
- 
 
+ 
 
 function App() {
   
@@ -24,7 +24,10 @@ function App() {
         <Route path='/add' element={<AddCustomer />} />
         <Route path='edit/:id' element={<EditCustomer />} />
         <Route path='customer/:id' element={<CustomerDetails />} />
+        <Route path="/" element={<CustomerList />} />
+        <Route path="/customers/:id" element={<CustomerDetails />} />
       </Routes>
+
       <Footer />
 
     </>

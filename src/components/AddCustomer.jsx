@@ -84,7 +84,7 @@ const AddCustomer = () => {
         <textarea name="notes" value={formData.notes} onChange={handleChange} style={inputStyle} />
 
 
-        <button type="submit" >Add Customer</button>
+        
 
         <button style={buttonStyle} type="submit" >Add Customer</button>
 
@@ -94,5 +94,3 @@ const AddCustomer = () => {
 };
 
 export default AddCustomer;
-
-
