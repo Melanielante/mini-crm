@@ -1,52 +1,66 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { useNavigate, useParams } from 'react-router';
 
-function EditCustomer() {
-  const { id } = useParams();
+function EditCustomer  ()  {
+  const {id} = useParams();
   const navigate = useNavigate();
   const BASE_URL = "https://json-server-template-w3qs.onrender.com/customers";
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    status: '',
-    notes: ''
-  });
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState("");
+  const [notes, setNotes] = useState("");
 
+  //gettinng existing customer details
   useEffect(() => {
     fetch(`${BASE_URL}/${id}`)
-      .then(res => res.json())
-      .then(data => setFormData(data));
+    .then((res) => res.json())
+    .then((customer) => {
+      setName(customer.name);
+      setEmail(customer.email);
+      setStatus(customer.status);
+      setNotes(customer.notes);
+    });
   }, [id]);
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+    const updatedCustomer = {
+      name,
+      email,
+      status,
+      notes
+    };
 
     fetch(`${BASE_URL}/${id}`, {
       method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData)
+      headers: {
+        "Content Type": "application/json"
+      },
+      body:  JSON.stringify(updatedCustomer)
     })
-    .then(res => res.json())
-    .then(() => navigate('/list'));
+    .then((res) => res.json())
+
+    .then(() => navigate('/'));
   };
 
+
   return (
-    <div className="edit-customer">
-      <h2 className='font-bold p-4'>Edit Customer</h2>
-      <form onSubmit={handleSubmit} className="max-w-xl mx-auto bg-white p-6 rounded-2xl shadow-md space-y-4">
-        <input name="name" value={formData.name} onChange={handleChange} className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Customer Name" />
-        <input name="email" value={formData.email} onChange={handleChange} className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Email" />
-        <input name="status" value={formData.status} onChange={handleChange} className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Status" />
-        <input name="notes" value={formData.notes} onChange={handleChange} className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Notes" />
-        <button type="submit" className="bg-green-400 hover:bg-green-200 px-4 py-2 rounded-lg text-sm">Update</button>
-      </form>
+    <div>
+        <div className='edit-customer'>
+          <h2>EDIT CUSTOMER</h2>
+          <form onSubmit={handleSubmit}>
+            <input type="text" value={name} placeholder='customer name' onChange={(event) => setName(event.target.value)} />
+            <input type="text" value={email} placeholder='email address' onChange={(event) => setEmail(event.target.value)} />
+            <input type="text" value={status} placeholder='status' onChange={(event) => setStatus(event.target.value)} />
+            <input type="text" value={notes} placeholder='write notes' onChange={(event) => setNotes(event.target.value)} />
+
+            <button type='submit'>UPDATE</button>
+          </form>
+        </div>
     </div>
-  );
+  )
 }
 
-export default EditCustomer
+export default EditCustomer;

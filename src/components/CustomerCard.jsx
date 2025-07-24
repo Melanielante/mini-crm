@@ -1,28 +1,53 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 function CustomerCard({ customer, handleDelete }) {
-  const navigate = useNavigate();
-
   return (
-    <div className="flex items-center justify-between px-6 py-4 hover:bg-gray-50 border-b last:border-none" 
-    
-    onClick={() => navigate(`/customer/${customer.id}`)}>
-      <h3 className='font-semibold text-gray-800'>{customer.name}</h3>
-      <p>{customer.email}</p>
-      <p>{customer.status}</p>
-      <button 
-      className="bg-red-100  px-3 py-1 rounded-full text-sm hover:bg-green-200"
-        onClick={(e) => {
-          e.stopPropagation();
-          handleDelete(customer.id);
-        }} 
-        
-      >
-        Delete
-      </button>
+    <div
+      className="customer-card"
+      style={{
+        border: "1px solid #ccc",
+        borderRadius: "8px",
+        padding: "16px",
+        marginBottom: "12px",
+        backgroundColor: "#f9f9f9"
+      }}
+    >
+      <h3>{customer.name}</h3>
+      <p>Email: {customer.email}</p>
+      <p>Status: {customer.status}</p>
+      
+      <div style={{ display: "flex", gap: "8px", marginTop: "10px" }}>
+        <button
+          onClick={() => handleDelete(customer.id)}
+          style={{
+            padding: "6px 12px",
+            backgroundColor: "red",
+            color: "black",
+            border: "none",
+            borderRadius: "4px",
+            cursor: "pointer"
+          }}
+        >
+          Delete
+        </button>
+
+        <Link
+          to={`/customers/${customer.id}`}
+          style={{
+            padding: "6px 12px",
+            backgroundColor: "gray",
+            color: "white",
+            textDecoration: "none",
+            borderRadius: "4px"
+          }}
+        >
+          More
+        </Link>
+      </div>
     </div>
   );
 }
 
-export default CustomerCard
+export default CustomerCard;
