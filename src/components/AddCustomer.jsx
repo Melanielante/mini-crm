@@ -61,7 +61,7 @@ const AddCustomer = () => {
     .then(res => res.json())
     .then(() => {
       alert("Customer added!");
-      setFormData({ name: '', email: '', status: '', notes: '' });
+      setFormData({ name: '', email: '', status: '', notes: '', company: '', position: '', phoneNumber: '', location: '', lastContacted: '', createdAt: '' });
     });
   };
 
@@ -82,6 +82,21 @@ const AddCustomer = () => {
         
         <label>Notes:</label>
         <textarea name="notes" value={formData.notes} onChange={handleChange} style={inputStyle} />
+
+        <label>Company:</label>
+        <input name="company" value={formData.company} onChange={handleChange} style={inputStyle} required />
+
+        <label>Position:</label>
+        <input name="position" value={formData.position} onChange={handleChange} style={inputStyle} required />
+
+        <label>Phone Number:</label>
+        <input name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} style={inputStyle} required />
+
+        <label>Last Contacted:</label>
+        <input name="lastContacted" value={formData.lastContacted} onChange={handleChange} style={inputStyle} required />
+
+        <label>Created At:</label>
+        <input name="createdAt" value={formData.createdAt} onChange={handleChange} style={inputStyle} />
 
 
         
