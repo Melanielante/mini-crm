@@ -38,7 +38,7 @@ This app showcases key React concepts such as component-based architecture, prop
 
 ### View Live Site
 
-Visit the deployed application at : []
+Visit the deployed application at : [https://688400409016580ad4db4af0--guileless-naiad-da2d79.netlify.app/]
 
 The live site allows you to:
 
